@@ -1,4 +1,4 @@
-# inv_emulator
+# Neural emulators for fast synthesis and spatially regularized inversion of Stokes profiles
 
 **Neural emulators for fast synthesis and spatially regularized inversion of
 Stokes profiles, with examples for Si I 10827 Å, He I 10830 Å and Fe I 6301.5/6302.5 Å.**
@@ -8,7 +8,7 @@ equation for every pixel at every iteration. That is accurate but slow, and it
 limits how much of a field of view can be inverted with spatial coupling
 between pixels. This repository replaces the forward problem with
 *emulators*. These are small neural networks trained on large databases of
-Hazel2 syntheses. Each one maps a model atmosphere to its emergent Stokes
+synthetic profiles. Each one maps a model atmosphere to its emergent Stokes
 profiles in one forward pass, and the pass is differentiable. With the
 emulators in place, a full map (hundreds of thousands of pixels) is inverted
 on a GPU by gradient descent, with every pixel solved at once, optional
@@ -49,7 +49,7 @@ sphinx-build -b html docs docs/_build/html     # or: cd docs && make html
 | **Fe I 6302** | Fe I 6302.4936 Å | same | PCA, 20/34/34/32 on 80 λ | `weights/emulator_fe6302_pca_resmlp512_cosine_deriv.pt` |
 | **He I 10830** | He I 10830 triplet (chromospheric slab) | `Bx, By, Bz, Δv, a, height, θ` | PCA, 30 components for each of ε (IQUV), η (IQUV), ρ (QUV) | `weights/emulator_he10830_pca.pt` |
 
-The two Fe I emulators split the Hazel grid `linspace(6300.8921, 6303.2671,
+The two Fe I emulators split the wavelength grid `linspace(6300.8921, 6303.2671,
 150)` at the continuum point between the lines, and `SpectralSynthesizer`
 joins them back together. The He I emulator does not output Stokes profiles.
 It outputs the slab's emission, absorption and magneto-optical coefficients.
@@ -58,7 +58,7 @@ with the emulated Si I spectrum as the boundary condition. The repository also
 contains a Ca II 8542 emulator (`invert_caii8542.py`), which uses the same
 architecture.
 
-The photospheric emulators share the following architecture:
+The emulators for stratified atmospheres share the following architecture:
 
 * **Depth:** each of the 6 physical variables is projected by least squares
   onto 10 clamped cubic B-splines on log τ ∈ [−7.5, 1.5]. The derivative-spline
@@ -95,8 +95,8 @@ pip install numpy scipy torch h5py matplotlib tqdm
 Run the scripts from the repository root, because they import the local
 `modules` package. A CUDA GPU is used automatically when one is available.
 
-Download the weights from [here](https://cloud.iac.es/index.php/s/sJJE7DSXMTwnntA)
-and put them on the `weights/`.
+Download the weights and validation models from [here](https://cloud.iac.es/index.php/s/sJJE7DSXMTwnntA)
+and put them on the `weights/` and `models/`, respectively.
 
 ---
 

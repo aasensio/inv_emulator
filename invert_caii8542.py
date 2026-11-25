@@ -22,7 +22,7 @@ from modules.weak_field import effective_lande, lande_factor, second_order_lande
 import pyFPI
 
 LAMBDA_8542 = 8542.09
-MODELS = '/scratch/Dropbox/GIT/DeepLearning/universal_stokes_flow/database/models/models_validation.h5'
+MODELS = 'models/models_validation.h5'
 
 OBSERVATIONS = "/scratch1/datasets/sst/nb_8542_2023-06-29T09:05:41_09:05:41=0-21_stokes_corrected_export2026-06-11T09:30:36_im.fits"
 # /scratch1/crisp/nb_8542_2020-07-27T08:35:09_scans=0-10_stokes_corrected_sp.fits'

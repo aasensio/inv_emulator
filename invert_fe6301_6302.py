@@ -28,7 +28,7 @@ from modules.weak_field import effective_lande, lande_factor, second_order_lande
 
 LAMBDA_6301 = 6301.5012
 LAMBDA_6302 = 6302.4936
-MODELS = '/scratch/Dropbox/GIT/DeepLearning/universal_stokes_flow/database/models/models_validation.h5'
+MODELS = 'models/models_validation.h5'
 
 
 # --------------------------------------------------------------------------- #

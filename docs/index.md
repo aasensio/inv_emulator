@@ -16,7 +16,7 @@ neighbouring pixels through spatial regularization, or to account for the
 telescope's spatial PSF.
 
 This code replaces the radiative transfer step with **emulators**. These are
-neural networks trained on millions of Hazel2 syntheses. Each one returns the
+neural networks trained on millions of synthetic profiles. Each one returns the
 Stokes profiles of a model atmosphere in a single forward pass, and the pass
 can be differentiated with PyTorch's autograd. As a result:
 
@@ -34,9 +34,7 @@ can be differentiated with PyTorch's autograd. As a result:
 | **Si I 10827** | 10824–10833 Å | photospheric line in the He I 10830 window |
 | **Fe I 6301** and **Fe I 6302** | 6300.9–6303.3 Å | the Hinode SP doublet (one emulator per line) |
 | **He I 10830** | 10823–10834 Å | chromospheric constant-property slab (emits ε, η, ρ), combined with an exact formal solution |
-
-A Ca II 8542 emulator with the same architecture is also included
-(`invert_caii8542.py`).
+| **Ca II 8542** | 8540-8544 Å | chromospheric line |
 
 ## The two representations
 

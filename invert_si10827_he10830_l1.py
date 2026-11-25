@@ -34,7 +34,7 @@ from modules.weak_field import effective_lande, lande_factor, second_order_lande
 
 LAMBDA_SI = 10827.089
 LAMBDA_HE_RED = 10830.30  # centre of the (blended) red components of the triplet
-MODELS = '/scratch/Dropbox/GIT/DeepLearning/universal_stokes_flow/database/models/models_validation.h5'
+MODELS = 'models/models_validation.h5'
 
 observations_file = 'observations/stokesall_15Jul24ARM1_009_norm_xtalk.h5'
 output = 'inversions/inversion_result_si10827_he10830_l1.h5'

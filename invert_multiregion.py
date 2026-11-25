@@ -45,7 +45,7 @@ from modules.regularization import Regularizer
 from modules.telluric import TelluricLine, telluric_initial_guess, telluric_variables
 from modules.weak_field import effective_lande, lande_factor, second_order_lande
 
-MODELS = '/scratch/Dropbox/GIT/DeepLearning/universal_stokes_flow/database/models/models_validation.h5'
+MODELS = 'models/models_validation.h5'
 NOISE = 1e-3   # added to the (noiseless) synthetic observations; None for real data
 
 LAMBDA_6301, LAMBDA_6302 = 6301.5012, 6302.4936

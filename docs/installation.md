@@ -42,6 +42,12 @@ together with the B-spline projection matrices, the PCA eigenvectors and mean
 profiles, the scalers, and a `meta` dictionary describing the configuration.
 See [Emulator architecture](architecture.md#the-checkpoint).
 
+## Models
+
+The validation models from which some statistics are extracted
+are also found in [here](https://cloud.iac.es/index.php/s/sJJE7DSXMTwnntA). 
+Place them in `models/`:
+
 ## Training-model database
 
 The inversion scripts read the training model atmospheres, `MODELS =
