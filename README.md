@@ -77,8 +77,8 @@ The photospheric emulators share the following architecture:
 > bulk line-of-sight velocity is applied afterwards as a Doppler shift of the
 > synthetic spectrum (see below).
 
-> `weights/` is excluded from git (`.gitignore`). Download the checkpoints
-> separately and place them in `weights/`.
+<!-- > `weights/` is excluded from git (`.gitignore`). Download the checkpoints -->
+<!-- > separately and place them in `weights/`. -->
 
 ---
 
@@ -94,6 +94,9 @@ pip install numpy scipy torch h5py matplotlib tqdm
 
 Run the scripts from the repository root, because they import the local
 `modules` package. A CUDA GPU is used automatically when one is available.
+
+Download the weights from [here](https://cloud.iac.es/index.php/s/sJJE7DSXMTwnntA)
+and put them on the `weights/`.
 
 ---
 

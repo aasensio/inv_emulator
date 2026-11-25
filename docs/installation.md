@@ -25,8 +25,8 @@ repository root so that `from modules... import ...` resolves.
 
 ## Emulator weights
 
-The checkpoints are not tracked by git (`weights/` is listed in
-`.gitignore`). Place them in `weights/`:
+The checkpoints are found in [here](https://cloud.iac.es/index.php/s/sJJE7DSXMTwnntA). 
+Place them in `weights/`:
 
 ```
 weights/
