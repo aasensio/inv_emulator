@@ -1,7 +1,7 @@
 # inv_emulator
 
 **Neural emulators for fast synthesis and spatially regularized inversion of
-Stokes profiles of Si I 10827 Å, He I 10830 Å and Fe I 6301.5/6302.5 Å.**
+Stokes profiles, with examples for Si I 10827 Å, He I 10830 Å and Fe I 6301.5/6302.5 Å.**
 
 Classical inversion codes (SIR, Hazel, ...) solve the radiative transfer
 equation for every pixel at every iteration. That is accurate but slow, and it

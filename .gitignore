@@ -21,6 +21,8 @@ quality/
 inversions/
 weights/
 
+README.orig.md
+
 # Distribution / packaging
 .Python
 build/
